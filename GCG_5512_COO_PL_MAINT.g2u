@@ -1,0 +1,809 @@
+Program.Sub.ScreenSU.Start
+Gui.Form1..Create
+Gui.Form1..Caption("Certificate of Origin Maintenance for Product Line")
+Gui.Form1..Size(8775,3960)
+Gui.Form1..Position(0,0)
+Gui.Form1..ForeColor(0)
+Gui.Form1..Backcolor(-2147483633)
+Gui.Form1..MousePointer(0)
+Gui.Form1..Event(UnLoad,form1_unload)
+Gui.Form1..minx(0)
+Gui.Form1..miny(0)
+Gui.Form1.txtPL.Create(textbox,"",True,540,300,0,4350,555,False,0,"Arial",8,-2147483643,1)
+Gui.Form1.txtPL.Text("")
+Gui.Form1.txtPL.MaxLength(2)
+Gui.Form1.txtPL.TabStop(True)
+Gui.Form1.txtPL.DefaultValue("")
+Gui.Form1.txtPL.Locked(True)
+Gui.Form1.lbl1.Create(label,"PL",True,645,255,0,4350,330,True,0,"Arial",8,-2147483633,0)
+Gui.Form1.lbl1.DefaultValue("")
+Gui.Form1.cmdPL.Create(button)
+Gui.Form1.cmdPL.Caption("^")
+Gui.Form1.cmdPL.Size(420,375)
+Gui.Form1.cmdPL.Position(4920,510)
+Gui.Form1.cmdPL.TabStop(True)
+Gui.Form1.cmdPL.TabIndex(2)
+Gui.Form1.cmdPL.DefaultValue("")
+Gui.Form1.cmdPL.Event(Click,cmdpl_click)
+Gui.Form1.txtTC.Create(textbox,"",True,1215,300,0,105,1170,True,0,"Arial",8,-2147483643,1)
+Gui.Form1.txtTC.Text("")
+Gui.Form1.txtTC.MaxLength(7)
+Gui.Form1.txtTC.TabStop(True)
+Gui.Form1.txtTC.TabIndex(3)
+Gui.Form1.txtTC.DefaultValue("")
+Gui.Form1.lbl2.Create(label,"Tariff Code",True,1080,255,0,105,945,True,0,"Arial",8,-2147483633,0)
+Gui.Form1.lbl2.DefaultValue("")
+Gui.Form1.txtPrefCrit.Create(textbox,"",True,1500,300,0,2445,1170,True,0,"Arial",8,-2147483643,1)
+Gui.Form1.txtPrefCrit.Text("")
+Gui.Form1.txtPrefCrit.MaxLength(7)
+Gui.Form1.txtPrefCrit.TabStop(True)
+Gui.Form1.txtPrefCrit.TabIndex(5)
+Gui.Form1.txtPrefCrit.DefaultValue("")
+Gui.Form1.lbl3.Create(label,"Preference Criterion",True,1680,255,0,2445,945,True,0,"Arial",8,-2147483633,0)
+Gui.Form1.lbl3.DefaultValue("")
+Gui.Form1.txtProducer.Create(textbox,"",True,1500,300,0,3975,1170,True,0,"Arial",8,-2147483643,1)
+Gui.Form1.txtProducer.Text("")
+Gui.Form1.txtProducer.MaxLength(8)
+Gui.Form1.txtProducer.TabStop(True)
+Gui.Form1.txtProducer.TabIndex(6)
+Gui.Form1.txtProducer.DefaultValue("")
+Gui.Form1.lbl4.Create(label,"Producer",True,1230,255,0,3975,945,True,0,"Arial",8,-2147483633,0)
+Gui.Form1.lbl4.DefaultValue("")
+Gui.Form1.txtNetCost.Create(textbox,"",True,1590,300,0,5505,1170,True,0,"Arial",8,-2147483643,1)
+Gui.Form1.txtNetCost.Text("")
+Gui.Form1.txtNetCost.MaxLength(9)
+Gui.Form1.txtNetCost.TabStop(True)
+Gui.Form1.txtNetCost.TabIndex(7)
+Gui.Form1.txtNetCost.DefaultValue("")
+Gui.Form1.lbl5.Create(label,"Net Cost",True,1425,255,0,5505,945,True,0,"Arial",8,-2147483633,0)
+Gui.Form1.lbl5.DefaultValue("")
+Gui.Form1.txtCountry.Create(textbox,"",True,2355,300,0,105,1785,True,0,"Arial",8,-2147483643,1)
+Gui.Form1.txtCountry.Text("")
+Gui.Form1.txtCountry.MaxLength(10)
+Gui.Form1.txtCountry.TabStop(True)
+Gui.Form1.txtCountry.TabIndex(8)
+Gui.Form1.txtCountry.DefaultValue("")
+Gui.Form1.lbl6.Create(label,"Country of Origin",True,1935,255,0,105,1575,True,0,"Arial",8,-2147483633,0)
+Gui.Form1.lbl6.DefaultValue("")
+Gui.Form1.mltxtDesc.Create(textboxm)
+Gui.Form1.mltxtDesc.Size(5415,540)
+Gui.Form1.mltxtDesc.Position(105,2415)
+Gui.Form1.mltxtDesc.BorderStyle(1)
+Gui.Form1.mltxtDesc.MaxLength(100)
+Gui.Form1.mltxtDesc.NumericOnly(0)
+Gui.Form1.mltxtDesc.TabStop(True)
+Gui.Form1.mltxtDesc.TabIndex(9)
+Gui.Form1.mltxtDesc.DefaultValue("")
+Gui.Form1.lbl7.Create(label,"Description",True,1245,255,0,105,2205,True,0,"Arial",8,-2147483633,0)
+Gui.Form1.lbl7.DefaultValue("")
+Gui.Form1.cmdSave.Create(button)
+Gui.Form1.cmdSave.Caption("Save")
+Gui.Form1.cmdSave.Size(885,375)
+Gui.Form1.cmdSave.Position(75,3060)
+Gui.Form1.cmdSave.TabStop(True)
+Gui.Form1.cmdSave.TabIndex(10)
+Gui.Form1.cmdSave.DefaultValue("")
+Gui.Form1.cmdSave.Event(Click,cmdsave_click)
+Gui.Form1.lbl8.Create(Label,"Tariff Adder",True,1080,255,0,1365,945,True,0,"Arial",8,-2147483633,0)
+Gui.Form1.lbl8.DefaultValue("")
+Gui.Form1.txtTA.Create(TextBox,"",True,675,300,0,1365,1170,True,0,"Arial",8,-2147483643,1)
+Gui.Form1.txtTA.TabStop(True)
+Gui.Form1.txtTA.TabIndex(4)
+Gui.Form1.txtTA.MaxLength(3)
+Gui.Form1.txtTA.DefaultValue("")
+Gui.Form1.txtLoc.Create(TextBox,"",True,540,300,0,3585,555,False,0,"Arial",8,-2147483643,1)
+Gui.Form1.txtLoc.TabStop(True)
+Gui.Form1.txtLoc.MaxLength(2)
+Gui.Form1.txtLoc.Locked(True)
+Gui.Form1.txtLoc.DefaultValue("")
+Gui.Form1.txtPart.Create(TextBox,"",True,3240,300,0,105,555,False,0,"Arial",8,-2147483643,1)
+Gui.Form1.txtPart.TabStop(True)
+Gui.Form1.txtPart.MaxLength(20)
+Gui.Form1.txtPart.Locked(True)
+Gui.Form1.txtPart.DefaultValue("")
+Gui.Form1.lblPart.Create(Label,"Part",True,645,255,0,105,330,True,0,"Arial",8,-2147483633,0)
+Gui.Form1.lblPart.DefaultValue("")
+Gui.Form1.lblLoc.Create(Label,"Loc",True,645,255,0,3585,330,True,0,"Arial",8,-2147483633,0)
+Gui.Form1.lblLoc.DefaultValue("")
+Gui.CertificateorOrgin..Create
+Gui.CertificateorOrgin..Caption("Certificate of Origin")
+Gui.CertificateorOrgin..Size(4305,8700)
+Gui.CertificateorOrgin..MinX(0)
+Gui.CertificateorOrgin..MinY(0)
+Gui.CertificateorOrgin..Position(0,0)
+Gui.CertificateorOrgin..BackColor(-2147483633)
+Gui.CertificateorOrgin..MousePointer(0)
+Gui.CertificateorOrgin..Event(UnLoad,CertificateorOrgin_UnLoad)
+Gui.CertificateorOrgin.lbl1.Create(Label,"Exporter Name and Address",True,2520,255,0,105,195,True,0,"Arial",8,-2147483633,0)
+Gui.CertificateorOrgin.txtExporter.Create(TextBoxR)
+Gui.CertificateorOrgin.txtExporter.Size(3930,2175)
+Gui.CertificateorOrgin.txtExporter.Position(105,420)
+Gui.CertificateorOrgin.lblProducer.Create(Label,"Producer Name and Address",True,3435,255,0,105,3360,True,0,"Arial",8,-2147483633,0)
+Gui.CertificateorOrgin.txtProducer.Create(TextBoxR)
+Gui.CertificateorOrgin.txtProducer.Size(3930,2175)
+Gui.CertificateorOrgin.txtProducer.Position(105,3585)
+Gui.CertificateorOrgin.lblCompany.Create(Label,"Company Name",True,1935,255,0,105,7185,True,0,"Arial",8,-2147483633,0)
+Gui.CertificateorOrgin.txtCompany.Create(TextBox,"",True,3195,300,0,105,7410,True,0,"Arial",8,-2147483643,1)
+Gui.CertificateorOrgin.cmdPrint.Create(Button)
+Gui.CertificateorOrgin.cmdPrint.Size(855,375)
+Gui.CertificateorOrgin.cmdPrint.Position(105,7875)
+Gui.CertificateorOrgin.cmdPrint.Caption("Print")
+Gui.CertificateorOrgin.cmdPrint.Event(Click,cmdPrint_Click)
+Gui.CertificateorOrgin.lblExpTaxID.Create(Label,"Exporter Tax ID.",True,1935,255,0,105,2700,True,0,"Arial",8,-2147483633,0)
+Gui.CertificateorOrgin.txtExpTaxID.Create(TextBox,"",True,3240,300,0,105,2925,True,0,"Arial",8,-2147483643,1)
+Gui.CertificateorOrgin.lblProdTaxID.Create(Label,"Producer Tax ID.",True,1935,255,0,105,5880,True,0,"Arial",8,-2147483633,0)
+Gui.CertificateorOrgin.txtProdTaxID.Create(TextBox,"",True,3240,300,0,105,6105,True,0,"Arial",8,-2147483643,1)
+Gui.CertificateorOrgin.lblImpTaxID.Create(Label,"Importer Tax ID.",True,1935,255,0,105,6570,True,0,"Arial",8,-2147483633,0)
+Gui.CertificateorOrgin.txtImpTaxID.Create(TextBox,"",True,3240,300,0,105,6795,True,0,"Arial",8,-2147483643,1)
+Gui.FormSOSelect..Create
+Gui.FormSOSelect..Caption("Certificate or Origin SO Selection")
+Gui.FormSOSelect..Size(4815,1815)
+Gui.FormSOSelect..MinX(0)
+Gui.FormSOSelect..MinY(0)
+Gui.FormSOSelect..Position(0,0)
+Gui.FormSOSelect..BackColor(-2147483633)
+Gui.FormSOSelect..MousePointer(0)
+Gui.FormSOSelect..Event(UnLoad,FormSOSelect_UnLoad)
+Gui.FormSOSelect.lblSOSel.Create(Label,"Select Sales Order #",True,1815,255,0,75,165,True,0,"Arial",8,-2147483633,0)
+Gui.FormSOSelect.txtSOSel.Create(TextBox,"",True,1725,300,0,105,375,True,0,"Arial",8,-2147483643,1)
+Gui.FormSOSelect.txtSOSel.Event(GotFocus,txtSOSel_GotFocus)
+Gui.FormSOSelect.cmdSoSel.Create(Button)
+Gui.FormSOSelect.cmdSoSel.Size(450,375)
+Gui.FormSOSelect.cmdSoSel.Position(1905,330)
+Gui.FormSOSelect.cmdSoSel.Caption("^")
+Gui.FormSOSelect.cmdSoSel.Event(Click,cmdSoSel_Click)
+Gui.FormSOSelect.cmdSOSelPrint.Create(Button)
+Gui.FormSOSelect.cmdSOSelPrint.Size(855,375)
+Gui.FormSOSelect.cmdSOSelPrint.Position(120,765)
+Gui.FormSOSelect.cmdSOSelPrint.Caption("Print")
+Gui.FormSOSelect.cmdSOSelPrint.Event(Click,cmdSOSelPrint_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.UDT.uCompany.Define("TERMINAL",STRING,"")
+V.UDT.uCompany.Define("NAME_COMPANY",STRING,"NAME_COMPANY")
+V.UDT.uCompany.Define("ADDRESS1",STRING,"ADDRESS1")
+V.UDT.uCompany.Define("ADDRESS2",STRING,"ADDRESS2")
+V.UDT.uCompany.Define("CITY",STRING,"CITY")
+V.UDT.uCompany.Define("STATE",STRING,"STATE")
+V.UDT.uCompany.Define("CODE_ZIP",STRING,"CODE_ZIP")
+V.UDT.uCompany.Define("COUNTRY",STRING,"COUNTRY")
+V.uGlobal.uCompany.Declare("uCompany")
+
+V.UDT.uCust.Define("CUSTOMER_NAME",STRING,"CUSTOMER_NAME")
+V.UDT.uCust.Define("TERMINAL",STRING,"")
+V.UDT.uCust.Define("ADDRESS1",STRING,"ADDRESS1")
+V.UDT.uCust.Define("ADDRESS2",STRING,"ADDRESS2")
+V.UDT.uCust.Define("ADDRESS3",STRING,"ADDRESS3")
+V.UDT.uCust.Define("ADDRESS4",STRING,"ADDRESS4")
+V.UDT.uCust.Define("ADDRESS5",STRING,"ADDRESS5")
+V.UDT.uCust.Define("CITY",STRING,"CITY")
+V.UDT.uCust.Define("STATE",STRING,"STATE")
+V.UDT.uCust.Define("CODE_ZIP",STRING,"ZIP")
+V.UDT.uCust.Define("COUNTRY",STRING,"COUNTRY")
+V.uGlobal.uCust.Declare("uCust")
+
+V.UDT.uProdLine.Define("TERMINAL",STRING,"")
+V.UDT.uProdLine.Define("PRODUCT_LINE",STRING,"PRODUCT_LINE")
+V.UDT.uProdLine.Define("DESCRIPTION",STRING,"DESCRIPTION")
+V.UDT.uProdLine.Define("TARIFF_CODE",STRING,"TARIFF_CODE")
+V.UDT.uProdLine.Define("TARIFF_ADDER",STRING,"TARIFF_ADDER")
+V.UDT.uProdLine.Define("PREF_CRIT",STRING,"PREF_CRIT")
+V.UDT.uProdLine.Define("PRODUCER",STRING,"PRODUCER")
+V.UDT.uProdLine.Define("NET_COST",STRING,"NET_COST")
+V.UDT.uProdLine.Define("COUNTRY_OO",STRING,"COUNTRY")
+V.uGlobal.uProdLine.Declare("uProdLine")
+
+'Loaded directly to print table
+V.UDT.uCOO.Define("TERMINAL",STRING,"")
+V.UDT.uCOO.Define("NAME_COMPANY",STRING,"")
+V.UDT.uCOO.Define("ADDRESS1",STRING,"")
+V.UDT.uCOO.Define("ADDRESS2",STRING,"")
+V.UDT.uCOO.Define("ADDRESS3",STRING,"")
+V.UDT.uCOO.Define("ADDRESS4",STRING,"")
+V.UDT.uCOO.Define("ADDRESS5",STRING,"")
+V.UDT.uCOO.Define("CITY",STRING,"")
+V.UDT.uCOO.Define("STATE","STRING","")
+V.UDT.uCOO.Define("CODE_ZIP",STRING,"")
+V.UDT.uCOO.Define("COUNTRY",STRING,"COUNTRY")
+V.UDT.uCOO.Define("CUSTOMER_NAME",STRING,"")
+V.UDT.uCOO.Define("C_ADDRESS1",STRING,"")
+V.UDT.uCOO.Define("C_ADDRESS2",STRING,"")
+V.UDT.uCOO.Define("C_CITY",STRING,"")
+V.UDT.uCOO.Define("C_STATE",STRING,"")
+V.UDT.uCOO.Define("C_CODE_ZIP",STRING,"")
+V.UDT.uCOO.Define("C_COUNTRY",STRING,"")
+V.UDT.uCOO.Define("PART",STRING,"PART")
+V.UDT.uCOO.Define("LOCATION",STRING,"LOCATION")
+V.UDT.uCOO.Define("PRODUCT_LINE",STRING,"PRODUCT_LINE")
+V.UDT.uCOO.Define("DESCRIPTION",STRING,"DESCRIPTION")
+V.UDT.uCOO.Define("TARIFF_CODE",STRING,"TARIFF_CODE")
+V.UDT.uCOO.Define("TARIFF_ADDER",STRING,"TARRIFF_ADDER")
+V.UDT.uCOO.Define("PREF_CRIT",STRING,"PREF_CRIT")
+V.UDT.uCOO.Define("PRODUCER",STRING,"PRODUCER")
+V.UDT.uCOO.Define("NET_COST",STRING,"NET_COST")
+V.UDT.uCOO.Define("COUNTRY_OO",STRING,"COUNTRY")
+V.UDT.uCOO.Define("User1",STRING,"")
+V.UDT.uCOO.Define("User2",STRING,"")
+
+V.uGlobal.uCOO.Declare("uCOO")
+
+V.Global.bPrint.Declare(Boolean,False)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+'2019-04-17
+'Project 5512
+'FORKED FROM 4029 by Josh W. / Roger King
+'Customer Specific, requires ARC 3591
+'NAFTA is no longer a thing, so this is now a "Certificate of Origin", but still uses all of the same infomormation.
+
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,16090)
+
+	'insert here: SFF 1/20/2020 - add popup for CHROBINSON QUESTION AND UPDATE BOL HEADER if they say yes. 
+	f.Intrinsic.Control.If(V.Passed.009001,=,"000066")
+		f.Intrinsic.Control.CallSub("updateBOL_HEADER")
+	f.Intrinsic.Control.EndIf
+
+
+	'ORIGINAL SCRIPT 5512 CODE, only inserted above this
+	F.Intrinsic.Control.If(V.Passed.CALLING-PGM,=,"ORD0LZBI")
+	F.Intrinsic.Control.AndIf(V.Passed.BIP_REPORTID,=,"000051")
+		
+		F.Intrinsic.UI.Msgbox("Would you like to print a Certificate of Origin?","Print Certificate of Origin?",3,V.Local.sRet)
+		F.Intrinsic.Control.SelectCase(V.Local.sRet)
+			'2 = Cancel
+			F.Intrinsic.Control.Case(2)
+				F.Intrinsic.Control.End
+
+			'7 = No
+			F.Intrinsic.Control.Case(7)
+				F.Intrinsic.Control.End
+
+			'6 = YES
+			F.Intrinsic.Control.Case(6)	
+				F.Intrinsic.Control.Callsub(Loadrst)
+				F.intrinsic.Control.Callsub(Print)
+				F.Intrinsic.Control.CallSub(form1_unload)
+			F.Intrinsic.Control.CaseElse
+				F.Intrinsic.Control.End
+
+		F.Intrinsic.Control.EndSelect
+
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndIf
+'Else launch maint program
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"M")
+		F.Intrinsic.Control.Callsub(Loadrst)
+		F.intrinsic.Control.Callsub(Print)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.Else
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+'		Gui.Form1.txtNetCost.NumericOnly(1)
+		Gui.Form1..Show
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.LoadRst.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+'Gathers data to print onto custom report
+V.Local.sSQL.Declare(String)
+V.Local.sSQL2.Declare(String)
+V.Local.sSQL3.Declare(String)
+V.Local.sSO.Declare(String)
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+V.uGlobal.uCompany.Redim(-1,-1)
+V.uGlobal.uCust.Redim(-1,-1)
+V.uGlobal.uProdLine.Redim(-1,-1)
+
+'Getting company info
+F.ODBC.Connection!conx.OpenRecordsetRO("rst","SELECT NAME_COMPANY, ADDRESS1, ADDRESS2, CITY, STATE, CODE_ZIP, COUNTRY from V_COMPANY WHERE RESV = '1' AND REC = '1'")
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","V.uGlobal.uCompany",True,0)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.CallSub(Form1_unload)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+'Loading Customer info
+F.Intrinsic.String.Build("SELECT CUSTOMER_NAME, ADDRESS1, ADDRESS2, ADDRESS3, ADDRESS4, ADDRESS5, CITY, STATE, ZIP, COUNTRY FROM V_BI_PACKING_LIST WHERE TERMINAL = '{0}' AND RPTID = '000051' AND LINE_TYPE = 'H'",V.Caller.Terminal,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","V.uGlobal.uCust",True,0)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+'Loading Line Data
+F.Intrinsic.Control.If(V.Caller.Switches,=,"M")
+	Gui.FormSOSelect..Show
+	Gui.FormSOSelect..WaitForDismiss
+	V.Local.sSO.Set(V.Screen.FormSOSelect!txtSOSel.Text)
+	F.Intrinsic.Control.If(V.Local.sSO.Trim,<>,"")
+		F.Intrinsic.String.Build("SELECT ORDER_NO, RECORD_NO from V_Order_Lines Where Order_No = '{0}' Order by Order_No, Record_No",V.Local.sSO.Trim,V.Local.sSQL)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("SELECT ORDER_NO, RECORD_NO from BI_PACKING_LIST WHERE TERMINAL = '{0}' AND RPTID = '000051' AND LINE_TYPE = 'L' ORDER BY ORDER_NO, RECORD_NO",V.Caller.Terminal,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conx.OpenRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+	F.Intrinsic.Control.DoUntil(V.ODBC.conx!rst.EOF,=,True)
+		F.Intrinsic.String.Build("SELECT PRODUCT_LINE,Part, Location From V_ORDER_LINES WHERE ORDER_NO = '{0}' AND RECORD_NO = '{1}'",V.ODBC.conx!rst.FieldValTrim!ORDER_NO,V.ODBC.conx!rst.FieldValTrim!RECORD_NO,V.Local.sSQL2)
+		F.ODBC.Connection!conx.OpenRecordsetRO("rst2",V.Local.sSQL2)
+		F.Intrinsic.Control.If(V.ODBC.conx!rst2.EOF,=,False)	
+			F.Intrinsic.String.Build("SELECT * FROM GCG_5512_COO_MNT WHERE PRODUCT_LINE = '{0}' and Part = '{1}' and Location = '{2}'",V.ODBC.conx!rst2.FieldValTrim!PRODUCT_LINE,V.ODBC.conx!rst2.FieldValTrim!Part,V.ODBC.conx!rst2.FieldValTrim!Location,V.Local.sSQL3)
+			F.ODBC.Connection!conx.OpenRecordsetRO("rst3",V.Local.sSQL3)
+			F.Intrinsic.Control.If(V.ODBC.conx!rst3.EOF,=,False)
+				F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst3","V.uGlobal.uCOO",True,0)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rst3.Close
+			
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rst2.Close
+	F.ODBC.conx!rst.MoveNext
+	F.Intrinsic.Control.Loop
+
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+'F.Intrinsic.Variable.UDTMultiSeekSet(uGlobal.uCOO!Part,uGlobal.uUser!Part,uGlobal.uCOO!Location,uGlobal.uUser!Locatoin,uGlobal.uCOO!USER1,uGlobal.uUser!USER1)
+'F.Intrinsic.Variable.UDTMultiSeekSet(uGlobal.uCOO!Part,uGlobal.uUser!Part,uGlobal.uCOO!Location,uGlobal.uUser!Locatoin,uGlobal.uCOO!USER2,uGlobal.uUser!USER2)
+
+'Deletes previous records from printing table
+F.Intrinsic.String.Build("SELECT * FROM GCG_5512_COO_CRT WHERE TERMINAL = '{0}'",V.Caller.Terminal,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+	F.Intrinsic.String.Build("DELETE FROM GCG_5512_COO_CRT WHERE TERMINAL = '{0}'",V.Caller.Terminal,V.Local.sSQL)
+	F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.Control.If(V.uGlobal.uCompany.UBound,<>,-1)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!NAME_COMPANY,V.uGlobal.uCompany!NAME_COMPANY)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!ADDRESS1,V.uGlobal.uCompany!ADDRESS1)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!ADDRESS2,V.uGlobal.uCompany!ADDRESS2)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!CITY,V.uGlobal.uCompany!CITY)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!STATE,V.uGlobal.uCompany!STATE)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!CODE_ZIP,V.uGlobal.uCompany!CODE_ZIP)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!COUNTRY,V.uGlobal.uCompany!COUNTRY)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.uGlobal.uCust.UBound,<>,-1)
+
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!CUSTOMER_NAME,V.uGlobal.uCust!CUSTOMER_NAME)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!C_ADDRESS1,V.uGlobal.uCust!ADDRESS1)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!C_ADDRESS2,V.uGlobal.uCust!ADDRESS2)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!ADDRESS3,V.uGlobal.uCust!ADDRESS3)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!ADDRESS4,V.uGlobal.uCust!ADDRESS4)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!ADDRESS5,V.uGlobal.uCust!ADDRESS5)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!C_CITY,V.uGlobal.uCust!CITY)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!C_STATE,V.uGlobal.uCust!STATE)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!C_CODE_ZIP,V.uGlobal.uCust!CODE_ZIP)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!C_COUNTRY,V.uGlobal.uCust!COUNTRY)
+F.Intrinsic.Control.EndIf
+
+'Loading report to table
+F.Intrinsic.Control.If(V.uGlobal.uCOO.UBound,<>,-1)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uCOO!TERMINAL,V.Caller.Terminal)
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!TERMINAL,"TERMINAL")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!NAME_COMPANY,"NAME_COMPANY")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!ADDRESS1,"ADDRESS1")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!ADDRESS2,"ADDRESS2")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!ADDRESS3,"ADDRESS3")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!ADDRESS4,"ADDRESS4")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!ADDRESS5,"ADDRESS5")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!CITY,"CITY")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!STATE,"STATE")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!CODE_ZIP,"ZIP")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!COUNTRY,"COUNTRY")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!CUSTOMER_NAME,"CUSTOMER_NAME")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!C_ADDRESS1,"C_ADDRESS1")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!C_ADDRESS2,"C_ADDRESS2")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!C_CITY,"C_CITY")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!C_STATE,"C_STATE")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!C_COUNTRY,"C_COUNTRY")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!C_CODE_ZIP,"CODE_ZIP")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!COUNTRY_OO,"COUNTRY_OO")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!TARIFF_ADDER,"TARIFF_ADDER")
+	
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!Part,"Part")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uCOO!Location,"Location")
+	
+	F.ODBC.Connection!conx.OpenRecordsetRW("rst","GCG_5512_COO_CRT")
+	F.Intrinsic.Variable.SaveUDTToRecordSet("conx","rst","V.uGlobal.uCOO")
+	F.ODBC.conx!rst.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadRst.End
+
+Program.Sub.Print.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+'Handels actual printing
+
+V.Local.sRptName.Declare(String)
+V.Local.sParam.Declare(String)
+V.Local.sParamVal.Declare(String)
+V.Local.iRpt.Declare(Long)
+V.Local.iRet.Declare
+V.Local.lBIRunID.Declare
+V.Local.lLogID.Declare
+V.Local.sTemp.Declare
+
+V.Local.sParam.Set("TERMINAL*!*Exporter*!*Producer*!*CompanyName*!*ExpTax*!*ProdTax*!*ImpTax")
+
+Gui.CertificateorOrgin..Show
+
+Gui.CertificateorOrgin..WaitForDismiss
+
+F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}",V.Caller.Terminal,V.Screen.CertificateorOrgin!txtExporter.Text,V.Screen.CertificateorOrgin!txtProducer.Text,V.Screen.CertificateorOrgin!txtCompany.Text,V.Screen.CertificateorOrgin!txtExpTaxID.Text,V.Screen.CertificateorOrgin!txtProdTaxID.Text,V.Screen.CertificateorOrgin!txtImpTaxID.Text,V.Local.sParamVal)
+
+F.Intrinsic.Control.If(V.Global.bPrint)
+	F.Intrinsic.String.Build("{0}\CUSTOM\GCG_5512_COO_CRT.rpt",V.Caller.BusintDir,V.Local.sRptName)
+	F.Global.BI.GetIDFromName("GCG_5512_COO_CERT.rpt",V.Local.iRpt)
+	F.Global.BI.GetRunID(V.Local.lBIRunID)
+	F.Global.BI.StartLogging(V.Local.lBIRunID,V.Local.iRpt,0,"",V.Local.lLogID)
+	F.Global.BI.StopLogging(V.Local.lLogID)
+	'F.Global.BI.InitializeReport("Certificate of Origin CERT",V.Local.sRptName,V.Local.iRpt)
+	'F.Global.BI.PrintReport(V.Local.iRpt,0,V.Local.sParam,V.Local.sParamVal,"",False)
+	F.Global.BI.RunReportPreProcessor(V.Local.lBIRunID,V.Local.lLogID,V.Local.sParam,V.Local.sParamVal,"",-1,True,"",-1,"",-1,"","",V.Local.iRet)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.Print.End
+
+Program.Sub.form1_unload.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.form1_unload.End
+
+Program.Sub.cmdpl_click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.sRet.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sWidths.Declare(String)
+V.Local.sTitles.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+'F.Intrinsic.UI.Browser(130,"",V.Local.sRet)
+
+V.Local.sTitles.Set("Part*!*Location*!*Product Line")
+V.Local.sWidths.Set("1800*!*900*!*900")
+
+F.Intrinsic.String.Split(V.Local.sTitles,"*!*",V.Local.sTitles)
+F.Intrinsic.String.Split(V.Local.sWidths,"*!*",V.Local.sWidths)
+
+F.Intrinsic.String.Build("Select Part, Location, Product_Line From V_Inventory_Mstr","",V.Local.sSQL)
+
+F.Intrinsic.UI.Browser("Select Part/Loc/PL","conx",V.Local.sSQL,V.Local.sTitles,V.Local.sWidths,12500,12500,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.Form1.txtPart.Text(V.Local.sRet(0).Trim)
+	Gui.Form1.txtLoc.Text(V.Local.sRet(1).Trim)
+	Gui.Form1.txtPL.Text(V.Local.sRet(2).Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+F.Intrinsic.Control.AndIf(V.Local.sRet,<>,"")
+	'Query the product line selected in sRet and pull in whatever info saved in GCG Maint table
+	F.Intrinsic.String.Build("SELECT * FROM GCG_5512_COO_MNT WHERE Part = '{0}' and Location = '{1}' and PRODUCT_LINE = '{2}'",V.Local.sRet(0).Trim,V.Local.sRet(1).Trim,V.Local.sRet(2).Trim,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+		'load records found for PL
+		Gui.Form1.txtPart.Text(V.ODBC.conx!rst.FieldValTrim!PART)
+		Gui.Form1.txtLoc.Text(V.ODBC.conx!rst.FieldValTrim!LOCATION)
+		Gui.Form1.txtPL.Text(V.ODBC.conx!rst.FieldValTrim!PRODUCT_LINE)
+		Gui.Form1.txtTC.Text(V.ODBC.conx!rst.FieldValTrim!TARIFF_CODE)
+		Gui.Form1.txtTA.Text(V.ODBC.conx!rst.FieldValTrim!TARRIFF_ADDER)
+		Gui.Form1.txtPrefCrit.Text(V.ODBC.conx!rst.FieldValTrim!PREF_CRIT)
+		Gui.Form1.txtProducer.Text(V.ODBC.conx!rst.FieldValTrim!PRODUCER)
+		Gui.Form1.txtNetCost.Text(V.ODBC.conx!rst.FieldValTrim!NET_COST)
+		Gui.Form1.txtCountry.Text(V.ODBC.conx!rst.FieldValTrim!COUNTRY)
+		Gui.Form1.mltxtDesc.Text(V.ODBC.conx!rst.FieldValTrim!DESCRIPTION)
+	F.Intrinsic.Control.Else
+		'Clear screen since no records were found for product line
+		Gui.Form1.txtTC.Text("")
+		Gui.Form1.txtTA.Text("")
+		Gui.Form1.txtPrefCrit.Text("")
+		Gui.Form1.txtProducer.Text("")
+		Gui.Form1.txtNetCost.Text("")
+		Gui.Form1.txtCountry.Text("")
+		Gui.Form1.mltxtDesc.Text("")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdpl_click.End
+
+Program.Sub.cmdsave_click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.sSQL.Declare(String)
+V.Local.sMsg.Declare(String)
+F.Intrinsic.Control.If(V.Screen.Form1!txtPL.Text,<>,"")
+
+	'If records exist, delete them so no duplicates will be made
+	F.Intrinsic.String.Build("SELECT * FROM GCG_5512_COO_MNT WHERE Part = '{0}' and Location = '{1}' and PRODUCT_LINE = '{2}'",V.Screen.Form1!txtPart.Text,V.Screen.Form1!txtLoc.Text,V.Screen.Form1!txtPL.Text,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRW("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+		F.Intrinsic.String.Build("DELETE FROM GCG_5512_COO_MNT WHERE Part = '{0}' and Location = '{1}' and PRODUCT_LINE = '{2}'",V.Screen.Form1!txtPart.Text,V.Screen.Form1!txtLoc.Text,V.Screen.Form1!txtPL.Text,V.Local.sSQL)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+
+	F.Intrinsic.Control.If(V.Screen.Form1!txtNetCost.Text,=,"")
+		Gui.Form1.txtNetCost.Text(0)
+	F.Intrinsic.Control.EndIf
+
+	'Saving records to custom table
+	F.ODBC.Connection!conx.OpenRecordsetRW("rst","SELECT * FROM GCG_5512_COO_MNT")
+	F.ODBC.conx!rst.AddNew
+	F.ODBC.conx!rst.Set!Part(V.Screen.Form1!txtPart.Text)
+	F.ODBC.conx!rst.Set!Location(V.Screen.Form1!txtLoc.Text)
+	F.ODBC.conx!rst.Set!PRODUCT_LINE(V.Screen.Form1!txtPL.Text)
+	F.ODBC.conx!rst.Set!DESCRIPTION(V.Screen.Form1!mltxtDesc.Text)
+	F.ODBC.conx!rst.Set!TARIFF_CODE(V.Screen.Form1!txtTC.Text)
+	F.ODBC.conx!rst.Set!TARRIFF_ADDER(V.Screen.Form1!txtTA.Text)
+	F.ODBC.conx!rst.Set!PREF_CRIT(V.Screen.Form1!txtPrefCrit.Text)
+	F.ODBC.conx!rst.Set!PRODUCER(V.Screen.Form1!txtProducer.Text)
+	F.ODBC.conx!rst.Set!NET_COST(V.Screen.Form1!txtNetCost.Text)
+	F.ODBC.conx!rst.Set!COUNTRY(V.Screen.Form1!txtCountry.Text)
+	F.ODBC.conx!rst.Update
+	F.ODBC.conx!rst.Close
+
+	F.Intrinsic.String.Build("Information successfully saved for Part{0} Location {1} Product Line {2}",V.Screen.Form1!txtPart.Text,V.Screen.Form1!txtLoc.Text,V.Screen.Form1!txtPL.Text,V.Local.sMsg)
+	F.Intrinsic.UI.Msgbox(V.Local.sMsg,"Save Successful")
+	F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Please select a Part/Loc/product line to enter information against","Unable to Save")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdsave_click.End
+
+Program.Sub.CertificateorOrgin_UnLoad.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+Gui.CertificateorOrgin..Visible(False)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.CertificateorOrgin_UnLoad.End
+
+Program.Sub.cmdPrint_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+V.Global.bPrint.Set(True)
+F.Intrinsic.Control.CallSub(CertificateorOrgin_UnLoad)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdPrint_Click.End
+
+Program.Sub.FormSOSelect_UnLoad.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+Gui.FormSOSelect..Visible(False)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.FormSOSelect_UnLoad.End
+
+Program.Sub.cmdSOSelPrint_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+V.Global.bPrint.Set(True)
+F.Intrinsic.Control.CallSub(FormSOSelect_UnLoad)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSOSelPrint_Click.End
+
+Program.Sub.cmdSoSel_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+V.Local.sTitles.Declare(String,"")
+V.Local.sWidths.Declare(String,"")
+V.Local.sRet.Declare(String,"")
+V.Local.sSql.Declare(String,"")
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+		
+V.Local.sSql.Set("Select Order_No, Customer From V_Order_Header Order by Order_No") 
+V.Local.sTitles.Set("Order*!*Customer")
+V.Local.sWidths.Set("1800*!*6250")
+	
+F.Intrinsic.String.Split(V.Local.sTitles,"*!*",V.Local.sTitles)
+F.Intrinsic.String.Split(V.Local.sWidths,"*!*",V.Local.sWidths)
+
+F.ODBC.Connection!Con.OpenCompanyConnection
+
+F.Intrinsic.UI.Browser("Select Sales Order","con",V.Local.sSql,V.Local.sTitles,V.Local.sWidths,10200,9000,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.FormSOSelect.txtSOSel.Text(V.Local.sRet.Trim)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!Con.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSoSel_Click.End
+
+Program.Sub.txtSOSel_GotFocus.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+Gui.FormSOSelect.txtSOSel.SelectAll
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+		F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}","GCG_5512_COO_PL_MAINT.g2u",V.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.CallSub(form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndTry
+Program.Sub.txtSOSel_GotFocus.End
+
+Program.Sub.updateBOL_HEADER.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+v.Local.sSQL.Declare(String)
+v.Local.iRet.Declare(Long)
+v.Local.sRet.Declare(String)
+
+'this sub was coded for Electro mechanical corp on 1/20 to support their ch robinson freigh quote contract. 
+'coded by SFF. 
+' this script asks the user if this is a CH Robinson Order and if so, then it populates the thirdpartyfreight info on the BOL screen from Shipments New/Open
+
+f.Intrinsic.UI.Msgbox("Is this a CH Robinson Order?","CH Robinson Order?",4,v.Local.iRet)
+
+	
+f.Intrinsic.Control.If(v.Local.iRet,=,6)
+	'open connection
+	f.ODBC.Connection!con.opencompanyconnection
+	
+	'get waybillno
+	f.Intrinsic.String.Build("Select WAYBILL from BI_WAYBILL where TRMNL = '{0}' and RPTID = '000066' and REC_TYPE = 'H'",v.Caller.Terminal,v.Local.sSQL)
+	f.ODBC.Connection!con.executeandreturn(v.Local.sSQL,v.Local.sRet)
+	
+	'build update statement for bi table
+	f.Intrinsic.String.Build("update bol_header set THIRD_NAME = 'Federal Pacific',THIRD_ADRS1 = 'c/o FreightQuote',THIRD_ADRS2 = '901 W Carondelet Dr.',THIRD_CITY = 'Kansas City',THIRD_STATE = 'MO',THIRD_ZIP = '64114',THIRD_COUNTRY = '',THIRD_TELEPHONE = '' where WAYBILL_NO = '{0}';",v.Local.sRet,v.Local.sSQL)
+	'execute update
+	f.ODBC.Connection!con.execute(v.Local.sSQL)
+	
+	f.ODBC.Connection!con.Close
+
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.updateBOL_HEADER.End
+
+Program.Sub.Comments.Start
+${$0$}$NewScript$}$AGM$}$2/26/2015$}$False
+Program.Sub.Comments.End
